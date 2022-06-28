@@ -1,0 +1,35 @@
+.clients {
+  background-color: $white-color;
+  &__title {
+    @extend %title;
+  }
+  &__list {
+    @extend %list;
+    @include centredFlex();
+    margin-top: 50px;
+  }
+  &__item {
+    width: 170px;
+    height: 92px;
+    margin-left: $tipical-margin;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  &__link {
+    @extend %link;
+    @include centredFlex();
+    width: 100%;
+    height: 100%;
+    border: 1px solid $fill-icon;
+    border-radius: 4px;
+    color: $fill-icon;
+    fill: currentColor;
+    transition: border-color $transition-active, fill $transition-active;
+    &:hover,
+    &:focus {
+      border-color: $accent-color;
+      fill: $accent-color;
+    }
+  }
+}

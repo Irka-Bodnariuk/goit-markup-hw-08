@@ -1,0 +1,56 @@
+.team {
+  background-color: $button-portfolio-color;
+  &__title {
+    @extend %title;
+  }
+  &__list {
+    @extend %list;
+    @include centredFlex($ai: none, $jc: none);
+    margin-left: calc(-1 * $tipical-margin);
+    margin-top: 50px;
+  }
+  &__item {
+    flex-basis: calc(100% / 4 - $tipical-margin);
+    margin-left: $tipical-margin;
+
+    background-color: $white-color;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  &__content {
+    padding: $tipical-margin;
+  }
+
+  &__subtitle,
+  &__text {
+    color: $text-color;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+  }
+
+  &__subtitle {
+    color: $title-color;
+    font-weight: 500;
+  }
+
+  &__text {
+    margin-top: 10px;
+    margin-bottom: 16px;
+  }
+}
+
+.socials__link--white-color {
+  background-color: $white-color;
+}
+
+.socials__icon--white-fill {
+  fill: $fill-icon;
+  transition: fill $transition-active;
+  .socials__link--white-color:hover &,
+  .socials__link--white-color:focus & {
+    fill: $white-color;
+  }
+}

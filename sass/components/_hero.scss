@@ -1,0 +1,40 @@
+.section__hero {
+  margin: 0 auto;
+}
+
+.hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  background-color: #c4c4c4;
+  height: 600px;
+  max-width: 1600px;
+
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero-img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  &__title {
+    color: $white-color;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  &__button {
+    @extend %button;
+    @include centredFlex($df: inline-block);
+    margin-top: $tipical-margin;
+
+    transition: color $transition-active, background-color $transition-active;
+    &:hover,
+    &:focus {
+      color: $white-color;
+      background-color: $button-hover-color;
+    }
+  }
+}

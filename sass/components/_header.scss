@@ -1,0 +1,82 @@
+.header {
+  background-color: $white-color;
+  border-bottom: $border-color;
+  &__container {
+    @include centredFlex();
+  }
+}
+
+.navigation {
+  @include centredFlex();
+  &__list {
+    @extend %list;
+    @include centredFlex($ai: none, $jc: none);
+
+    margin-left: 93px;
+  }
+  &__link {
+    position: relative;
+    @extend %link;
+    @include centredFlex($df: block, $ai: none, $jc: none);
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: $title-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    transition: color $transition-active;
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+}
+
+.navigation__item + .navigation__item {
+  margin-left: 50px;
+}
+
+.current {
+  color: $accent-color;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: $accent-color;
+    border-radius: 2px;
+    bottom: -1px;
+    left: 0;
+  }
+}
+
+.contact {
+  @extend %list;
+  @include centredFlex();
+  margin-left: auto;
+
+  &__link {
+    @extend %link;
+    color: $text-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    @include centredFlex();
+    transition: color $transition-active;
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+  &__item:last-child {
+    margin-left: $tipical-margin;
+  }
+
+  &__icon {
+    margin-right: 10px;
+    fill: currentColor;
+  }
+}

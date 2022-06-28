@@ -1,0 +1,26 @@
+.socials {
+  @extend %list;
+  @include centredFlex();
+
+  &__item {
+    width: 44px;
+    height: 44px;
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    @extend %link;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    @include centredFlex();
+    transition: background-color $transition-active;
+    &:hover,
+    &:focus {
+      background-color: $accent-color;
+    }
+  }
+}

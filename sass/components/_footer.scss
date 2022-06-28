@@ -1,0 +1,120 @@
+.footer {
+  background-color: $background-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  &__container {
+    @include centredFlex($ai: baseline, $jc: none);
+  }
+  &__subscribe {
+    margin-left: auto;
+  }
+  &__join {
+    margin-left: 70px;
+  }
+}
+.address__link {
+  @extend %link;
+  color: $white-color;
+  font-size: 14px;
+  line-height: 1.71;
+  font-style: normal;
+  transition: color $transition-active;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.address__list {
+  @extend %list;
+  margin-top: 20px;
+}
+
+.address__item:not(:first-child) {
+  margin-top: 9px;
+}
+
+.address--color {
+  color: $rgba-color;
+}
+
+// ______________________________________________
+
+.join__title {
+  color: $white-color;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.socials__link--rgba-color {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.socials__icon--white-color {
+  fill: $white-color;
+}
+// -----------------------------------------------
+.subscribe__title {
+  color: $white-color;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.form {
+  @include centredFlex($ai: none, $jc: none);
+  &__input {
+    background-color: transparent;
+    width: 358px;
+    margin-right: 12px;
+    height: 50px;
+    padding: 15px 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    /* color: $accent-color; */
+    color: $rgba-color;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    outline: none;
+    transition: border-color $transition-active;
+    &:focus {
+      border-color: $accent-color;
+    }
+
+    &::placeholder {
+      left: 16px;
+      top: 50%;
+
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.25;
+      letter-spacing: 0.03em;
+      color: $rgba-color;
+    }
+  }
+
+  &__button {
+    @extend %button;
+    @include centredFlex();
+    box-shadow: $box-shadow-rgba;
+    transition: background-color $transition-active, box-shadow $transition-active;
+    &:hover,
+    &:focus {
+      background-color: $button-hover-color;
+      box-shadow: $box-shadow-rgba;
+    }
+  }
+  &__icon {
+    fill: $white-color;
+    margin-left: 10px;
+  }
+}
