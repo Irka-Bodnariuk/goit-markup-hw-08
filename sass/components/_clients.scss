@@ -6,7 +6,7 @@
   &__list {
     @extend %list;
     @include centredFlex();
-    margin-top: 50px;
+
     flex-wrap: wrap;
     gap: 30px;
   }
@@ -14,10 +14,10 @@
     height: 92px;
     width: calc((100% - $tipical-margin) / 2);
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
       width: calc((100% - $tipical-margin * 2) / 3);
     }
-    @media screen and (min-width: 1200px) {
+    @include desktop {
       width: calc((100% - $tipical-margin * 5) / 6);
     }
   }

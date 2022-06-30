@@ -70,13 +70,13 @@
 }
 
 .section-content {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .section-content {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 
@@ -149,10 +149,12 @@ p {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 30px;
 }
 @media screen and (min-width: 1200px) {
   .portfolio__title, .clients__title, .team__title, .works__title, .studio__title {
     font-size: 36px;
+    margin-bottom: 50px;
   }
 }
 
@@ -290,7 +292,7 @@ p {
   padding-top: 118px;
   padding-bottom: 118px;
   height: 400px;
-  max-width: 100%;
+  max-width: 1600px;
   background-color: #c4c4c4;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-img.jpg);
   background-repeat: no-repeat;
@@ -303,7 +305,6 @@ p {
     padding-top: 200px;
     padding-bottom: 200px;
     height: 600px;
-    max-width: 1600px;
   }
 }
 .hero__title {
@@ -392,7 +393,6 @@ p {
   }
 }
 .works__list {
-  margin-top: 50px;
   display: flex;
   align-items: none;
   justify-content: none;
@@ -429,7 +429,6 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  margin-top: 50px;
 }
 .team__item {
   background-color: #ffffff;
@@ -483,7 +482,6 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
   flex-wrap: wrap;
   gap: 30px;
 }

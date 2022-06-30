@@ -10,7 +10,7 @@
   }
   &__list {
     @extend %list;
-    margin-top: 50px;
+
     @include centredFlex($ai: none, $jc: none);
     margin-left: calc(-1 * $tipical-margin);
   }

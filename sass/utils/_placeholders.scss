@@ -32,8 +32,10 @@
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: $tipical-margin;
 
   @include desktop {
     font-size: 36px;
+    margin-bottom: 50px;
   }
 }
