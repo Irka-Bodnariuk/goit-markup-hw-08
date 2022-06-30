@@ -5,18 +5,23 @@
   }
   &__list {
     @extend %list;
-    @include centredFlex($ai: none, $jc: none);
-    margin-left: calc(-1 * $tipical-margin);
+    display: flex;
+    flex-wrap: wrap;
+    gap: $tipical-margin;
     margin-top: 50px;
   }
   &__item {
-    flex-basis: calc(100% / 4 - $tipical-margin);
-    margin-left: $tipical-margin;
-
     background-color: $white-color;
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
+
+    @media screen and (min-width: 768px) {
+      width: calc((100% - $tipical-margin) / 2);
+    }
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - $tipical-margin * 3) / 4);
+    }
   }
 
   &__content {

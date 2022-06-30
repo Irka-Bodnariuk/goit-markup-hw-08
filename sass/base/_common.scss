@@ -16,6 +16,10 @@
 }
 
 .section-content {
-  padding-top: $tipical-padding;
-  padding-bottom: $tipical-padding;
+  padding-top: $tipical-padding-desktop;
+  padding-bottom: $tipical-padding-desktop;
+  @media screen and (max-width: 1200px) {
+    padding-top: $tipical-padding;
+    padding-bottom: $tipical-padding;
+  }
 }

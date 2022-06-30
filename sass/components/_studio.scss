@@ -5,17 +5,22 @@
   }
   &__list {
     @extend %list;
-    @include centredFlex($ai: none, $jc: none);
-    margin-left: calc(-1 * $tipical-margin);
+    @include centredFlex($ai: none);
+    flex-wrap: wrap;
+    gap: 30px;
   }
 
   &__item {
-    flex-basis: calc(100% / 4 - $tipical-margin);
-    margin-left: $tipical-margin;
+    @media screen and (min-width: 768px) {
+      width: calc((100% - $tipical-margin) / 2);
+    }
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - $tipical-margin * 3) / 4);
+    }
   }
   &__thumb {
     @include centredFlex();
-    width: 270px;
+    max-width: 100%;
     height: 120px;
     background-color: $button-portfolio-color;
     border-radius: 4px;
@@ -27,6 +32,9 @@
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
   }
 
   &__text {
