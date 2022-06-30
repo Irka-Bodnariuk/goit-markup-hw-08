@@ -7,14 +7,16 @@
     @extend %list;
     @include centredFlex();
     margin-top: 50px;
+    flex-wrap: wrap;
+    gap: 30px;
   }
   &__item {
     width: 170px;
     height: 92px;
-    margin-left: $tipical-margin;
-    &:first-child {
-      margin-left: 0;
-    }
+    // margin-left: $tipical-margin;
+    // &:first-child {
+    //   margin-left: 0;
+    // }
   }
   &__link {
     @extend %link;
