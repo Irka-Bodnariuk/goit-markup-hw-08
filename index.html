@@ -5,12 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio</title>
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    /> -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
@@ -20,7 +14,7 @@
 
   <body>
     <!-- header -->
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header__container">
         <nav class="navigation">
           <a href="./index.html" lang="en" class="logo"
@@ -60,8 +54,70 @@
             >
           </li>
         </ul>
+        <button type="button" class="button__icon--open header__button">
+          <svg width="40" height="40">
+            <use href="./images/icons.svg#icon-menu_40px"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+      <div class="mobile-menu is-hidden">
+        <div class="container">
+          <div class="mobile-menu__top-box">
+            <button type="button" class="header__button button__icon--close">
+              <svg width="40" height="40">
+                <use href="./images/icons.svg#icon-close_40px"></use>
+              </svg>
+            </button>
+            <ul class="mobile-menu__list">
+              <li class="mobile-menu__item">
+                <a href="./index.html" class="current-mobile mobile-menu__link"
+                  >Студия</a
+                >
+              </li>
+
+              <li class="mobile-menu__item">
+                <a href="./portfolio.html" class="mobile-menu__link"
+                  >Портфолио</a
+                >
+              </li>
+
+              <li class="mobile-menu__item">
+                <a href="#contacts" class="mobile-menu__link">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="mobile-menu__bottom-box">
+            <ul class="mobile-contact">
+              <li class="mobile-contact__item">
+                <a href="tel:+380961111111" class="mobile-contact__link"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+
+              <li class="mobile-contact__item">
+                <a href="mailto:info@devstudio.com" class="mobile-contact__link"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mobile-soc">
+              <li class="mobile-soc__item">
+                <a href="" class="mobile-soc_link">Instagram</a>
+              </li>
+              <li class="mobile-soc__item">
+                <a href="" class="mobile-soc_link">Twitter</a>
+              </li>
+              <li class="mobile-soc__item">
+                <a href="" class="mobile-soc_link">Facebook</a>
+              </li>
+              <li class="mobile-soc__item">
+                <a href="" class="mobile-soc_link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
     <!-- Main -->
     <main>
       <!-- Hero -->
@@ -71,7 +127,9 @@
             Эффективные решения <br />
             для вашего бизнеса
           </h1>
-          <button type="button" class="hero__button" data-modal-open>Заказать услугу</button>
+          <button type="button" class="hero__button" data-modal-open>
+            Заказать услугу
+          </button>
         </div>
       </section>
       <!-- Особенности компании -->
@@ -87,7 +145,8 @@
               </div>
               <h3 class="studio__subtitle">Внимание к деталям</h3>
               <p class="studio__text">
-                Идейные соображения, а также начало повседневной работы по формированию позиции.
+                Идейные соображения, а также начало повседневной работы по
+                формированию позиции.
               </p>
             </li>
 
@@ -99,7 +158,8 @@
               </div>
               <h3 class="studio__subtitle">Пунктуальность</h3>
               <p class="studio__text">
-                Задача организации, в особенности же рамки и место обучения кадров влечет за собой.
+                Задача организации, в особенности же рамки и место обучения
+                кадров влечет за собой.
               </p>
             </li>
 
@@ -111,7 +171,8 @@
               </div>
               <h3 class="studio__subtitle">Планирование</h3>
               <p class="studio__text">
-                Равным образом консультация с широким активом в значительной степени обуславливает.
+                Равным образом консультация с широким активом в значительной
+                степени обуславливает.
               </p>
             </li>
 
@@ -123,7 +184,8 @@
               </div>
               <h3 class="studio__subtitle">Современные технологии</h3>
               <p class="studio__text">
-                Значимость этих проблем настолько очевидна, что реализация плановых заданий.
+                Значимость этих проблем настолько очевидна, что реализация
+                плановых заданий.
               </p>
             </li>
           </ul>
@@ -136,27 +198,39 @@
           <ul class="works__list">
             <li class="works__item">
               <div class="works__thumb">
-                <img srcset="./images/layout.jpg 1x, 
-                ./images/layout@2x.jpg 2x" 
-                src="./images/layout.jpg" alt="верстка" width="370" />
+                <img
+                  srcset="./images/layout.jpg 1x, ./images/layout@2x.jpg 2x"
+                  src="./images/layout.jpg"
+                  alt="верстка"
+                  width="370"
+                />
                 <p class="works__text">Десктопные приложения</p>
               </div>
             </li>
 
             <li class="works__item">
               <div class="works__thumb">
-                <img srcset="./images/development.jpg 1x, 
-                ./images/development@2x.jpg 2x"
-                src="./images/development.jpg" alt="разработка" width="370" />
+                <img
+                  srcset="
+                    ./images/development.jpg    1x,
+                    ./images/development@2x.jpg 2x
+                  "
+                  src="./images/development.jpg"
+                  alt="разработка"
+                  width="370"
+                />
                 <p class="works__text">Мобильные приложения</p>
               </div>
             </li>
 
             <li class="works__item">
               <div class="works__thumb">
-                <img srcset="./images/design.jpg 1x, 
-                ./images/design@2x.jpg 2x"
-                src="./images/design.jpg" alt="дизайн" width="370" />
+                <img
+                  srcset="./images/design.jpg 1x, ./images/design@2x.jpg 2x"
+                  src="./images/design.jpg"
+                  alt="дизайн"
+                  width="370"
+                />
                 <p class="works__text">Дизайнерские решения</p>
               </div>
             </li>
@@ -170,21 +244,33 @@
           <h2 class="team__title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
-
               <picture>
-                <source 
-                  srcset=" ./images/product-designer.jpg 1x, 
-                  ./images/product-designer@2x.jpg 2x "
-                  media="(min-width: 1200px)" />
-                  <source 
-                  srcset=" ./images/product-designer-tablet.jpg 1x, 
-                  ./images/product-designer-tablet@2x.jpg 2x "
-                  media="(min-width: 768px)" />
-                  <source 
-                  srcset=" ./images/product-designer-mobile.jpg 1x, 
-                  ./images/product-designer-mobile@2x.jpg 2x "
-                  media="(min-width: 320px)" />
-                  <img src="./images/product-designer-mobile.jpg" alt="Игорь Демьяненко" width="450" />
+                <source
+                  srcset="
+                    ./images/product-designer.jpg    1x,
+                    ./images/product-designer@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/product-designer-tablet.jpg    1x,
+                    ./images/product-designer-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/product-designer-mobile.jpg    1x,
+                    ./images/product-designer-mobile@2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/product-designer-mobile.jpg"
+                  alt="Игорь Демьяненко"
+                  width="450"
+                />
               </picture>
 
               <div class="team__content">
@@ -193,7 +279,11 @@
                 <ul class="socials">
                   <li class="socials__item">
                     <a href="" class="socials__link socials__link--white-color">
-                      <svg class="socials__icon socials__icon--white-fill" width="20" height="20">
+                      <svg
+                        class="socials__icon socials__icon--white-fill"
+                        width="20"
+                        height="20"
+                      >
                         <use href="./images/icons.svg#icon-instagram"></use>
                       </svg>
                     </a>
@@ -201,20 +291,32 @@
 
                   <li class="socials__item">
                     <a href="" class="socials__link socials__link--white-color"
-                      ><svg class="socials__icon socials__icon--white-fill" width="20" height="20">
+                      ><svg
+                        class="socials__icon socials__icon--white-fill"
+                        width="20"
+                        height="20"
+                      >
                         <use href="./images/icons.svg#icon-twitter"></use></svg
                     ></a>
                   </li>
 
                   <li class="socials__item">
                     <a href="" class="socials__link socials__link--white-color"
-                      ><svg class="socials__icon socials__icon--white-fill" width="20" height="20">
+                      ><svg
+                        class="socials__icon socials__icon--white-fill"
+                        width="20"
+                        height="20"
+                      >
                         <use href="./images/icons.svg#icon-facebook"></use></svg
                     ></a>
                   </li>
                   <li class="socials__item">
                     <a href="" class="socials__link socials__link--white-color"
-                      ><svg class="socials__icon socials__icon--white-fill" width="20" height="20">
+                      ><svg
+                        class="socials__icon socials__icon--white-fill"
+                        width="20"
+                        height="20"
+                      >
                         <use href="./images/icons.svg#icon-linkedin"></use></svg
                     ></a>
                   </li>
@@ -224,28 +326,45 @@
 
             <li class="team__item">
               <picture>
-                <source 
-                  srcset=" ./images/frontend-developer.jpg 1x, 
-                  ./images/frontend-developer@2x.jpg 2x "
-                  media="(min-width: 1200px)" />
-                  <source 
-                  srcset=" ./images/frontend-developer-tablet.jpg 1x, 
-                  ./images/frontend-developer-tablet@2x.jpg 2x "
-                  media="(min-width: 768px)" />
-                  <source 
-                  srcset=" ./images/frontend-developer-mobile.jpg 1x, 
-                  ./images/frontend-developer-mobile@2x.jpg 2x "
-                  media="(min-width: 320px)" />
-                  <img src="./images/frontend-developer-mobile.jpg" alt="Ольга Репина" width="450" />
+                <source
+                  srcset="
+                    ./images/frontend-developer.jpg    1x,
+                    ./images/frontend-developer@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/frontend-developer-tablet.jpg    1x,
+                    ./images/frontend-developer-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/frontend-developer-mobile.jpg    1x,
+                    ./images/frontend-developer-mobile@2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/frontend-developer-mobile.jpg"
+                  alt="Ольга Репина"
+                  width="450"
+                />
               </picture>
-              
+
               <div class="team__content">
                 <h3 class="team__subtitle">Ольга Репина</h3>
                 <p lang="en" class="team__text">Frontend Developer</p>
                 <ul class="socials">
                   <li class="socials__item">
                     <a href="" class="socials__link socials__link--white-color">
-                      <svg class="socials__icon socials__icon--white-fill" width="20" height="20">
+                      <svg
+                        class="socials__icon socials__icon--white-fill"
+                        width="20"
+                        height="20"
+                      >
                         <use href="./images/icons.svg#icon-instagram"></use>
                       </svg>
                     </a>
@@ -253,20 +372,32 @@
 
                   <li class="socials__item">
                     <a href="" class="socials__link socials__link--white-color"
-                      ><svg class="socials__icon socials__icon--white-fill" width="20" height="20">
+                      ><svg
+                        class="socials__icon socials__icon--white-fill"
+                        width="20"
+                        height="20"
+                      >
                         <use href="./images/icons.svg#icon-twitter"></use></svg
                     ></a>
                   </li>
 
                   <li class="socials__item">
                     <a href="" class="socials__link socials__link--white-color"
-                      ><svg class="socials__icon socials__icon--white-fill" width="20" height="20">
+                      ><svg
+                        class="socials__icon socials__icon--white-fill"
+                        width="20"
+                        height="20"
+                      >
                         <use href="./images/icons.svg#icon-facebook"></use></svg
                     ></a>
                   </li>
                   <li class="socials__item">
                     <a href="" class="socials__link socials__link--white-color"
-                      ><svg class="socials__icon socials__icon--white-fill" width="20" height="20">
+                      ><svg
+                        class="socials__icon socials__icon--white-fill"
+                        width="20"
+                        height="20"
+                      >
                         <use href="./images/icons.svg#icon-linkedin"></use></svg
                     ></a>
                   </li>
@@ -276,28 +407,45 @@
 
             <li class="team__item">
               <picture>
-                <source 
-                  srcset=" ./images/marketing.jpg 1x, 
-                  ./images/marketing@2x.jpg 2x "
-                  media="(min-width: 1200px)" />
-                  <source 
-                  srcset=" ./images/marketing-tablet.jpg 1x, 
-                  ./images/marketing-tablet@2x.jpg 2x "
-                  media="(min-width: 768px)" />
-                  <source 
-                  srcset=" ./images/marketing-mobile.jpg 1x, 
-                  ./images/marketing-mobile@2x.jpg 2x "
-                  media="(min-width: 320px)" />
-                  <img src="./images/marketing-mobile.jpg" alt="Николай Тарасов" width="450" />
+                <source
+                  srcset="
+                    ./images/marketing.jpg    1x,
+                    ./images/marketing@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/marketing-tablet.jpg    1x,
+                    ./images/marketing-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/marketing-mobile.jpg    1x,
+                    ./images/marketing-mobile@2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/marketing-mobile.jpg"
+                  alt="Николай Тарасов"
+                  width="450"
+                />
               </picture>
-              
+
               <div class="team__content">
                 <h3 class="team__subtitle">Николай Тарасов</h3>
                 <p lang="en" class="team__text">Marketing</p>
                 <ul class="socials">
                   <li class="socials__item">
                     <a href="" class="socials__link socials__link--white-color">
-                      <svg class="socials__icon socials__icon--white-fill" width="20" height="20">
+                      <svg
+                        class="socials__icon socials__icon--white-fill"
+                        width="20"
+                        height="20"
+                      >
                         <use href="./images/icons.svg#icon-instagram"></use>
                       </svg>
                     </a>
@@ -305,20 +453,32 @@
 
                   <li class="socials__item">
                     <a href="" class="socials__link socials__link--white-color"
-                      ><svg class="socials__icon socials__icon--white-fill" width="20" height="20">
+                      ><svg
+                        class="socials__icon socials__icon--white-fill"
+                        width="20"
+                        height="20"
+                      >
                         <use href="./images/icons.svg#icon-twitter"></use></svg
                     ></a>
                   </li>
 
                   <li class="socials__item">
                     <a href="" class="socials__link socials__link--white-color"
-                      ><svg class="socials__icon socials__icon--white-fill" width="20" height="20">
+                      ><svg
+                        class="socials__icon socials__icon--white-fill"
+                        width="20"
+                        height="20"
+                      >
                         <use href="./images/icons.svg#icon-facebook"></use></svg
                     ></a>
                   </li>
                   <li class="socials__item">
                     <a href="" class="socials__link socials__link--white-color"
-                      ><svg class="socials__icon socials__icon--white-fill" width="20" height="20">
+                      ><svg
+                        class="socials__icon socials__icon--white-fill"
+                        width="20"
+                        height="20"
+                      >
                         <use href="./images/icons.svg#icon-linkedin"></use></svg
                     ></a>
                   </li>
@@ -328,28 +488,45 @@
 
             <li class="team__item">
               <picture>
-                <source 
-                  srcset=" ./images/ui-designer.jpg 1x, 
-                  ./images/ui-designer@2x.jpg 2x "
-                  media="(min-width: 1200px)" />
-                  <source 
-                  srcset=" ./images/ui-designer-tablet.jpg 1x, 
-                  ./images/ui-designer-tablet@2x.jpg 2x "
-                  media="(min-width: 768px)" />
-                  <source 
-                  srcset=" ./images/ui-designer-mobile.jpg 1x, 
-                  ./images/ui-designer-mobile@2x.jpg 2x "
-                  media="(min-width: 320px)" />
-                  <img src="./images/ui-designer-mobile.jpg" alt="Михаил Ермаков" width="450" />
+                <source
+                  srcset="
+                    ./images/ui-designer.jpg    1x,
+                    ./images/ui-designer@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/ui-designer-tablet.jpg    1x,
+                    ./images/ui-designer-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/ui-designer-mobile.jpg    1x,
+                    ./images/ui-designer-mobile@2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/ui-designer-mobile.jpg"
+                  alt="Михаил Ермаков"
+                  width="450"
+                />
               </picture>
-              
+
               <div class="team__content">
                 <h3 class="team__subtitle">Михаил Ермаков</h3>
                 <p lang="en" class="team__text">UI Designer</p>
                 <ul class="socials">
                   <li class="socials__item">
                     <a href="" class="socials__link socials__link--white-color">
-                      <svg class="socials__icon socials__icon--white-fill" width="20" height="20">
+                      <svg
+                        class="socials__icon socials__icon--white-fill"
+                        width="20"
+                        height="20"
+                      >
                         <use href="./images/icons.svg#icon-instagram"></use>
                       </svg>
                     </a>
@@ -357,20 +534,32 @@
 
                   <li class="socials__item">
                     <a href="" class="socials__link socials__link--white-color"
-                      ><svg class="socials__icon socials__icon--white-fill" width="20" height="20">
+                      ><svg
+                        class="socials__icon socials__icon--white-fill"
+                        width="20"
+                        height="20"
+                      >
                         <use href="./images/icons.svg#icon-twitter"></use></svg
                     ></a>
                   </li>
 
                   <li class="socials__item">
                     <a href="" class="socials__link socials__link--white-color"
-                      ><svg class="socials__icon socials__icon--white-fill" width="20" height="20">
+                      ><svg
+                        class="socials__icon socials__icon--white-fill"
+                        width="20"
+                        height="20"
+                      >
                         <use href="./images/icons.svg#icon-facebook"></use></svg
                     ></a>
                   </li>
                   <li class="socials__item">
                     <a href="" class="socials__link socials__link--white-color"
-                      ><svg class="socials__icon socials__icon--white-fill" width="20" height="20">
+                      ><svg
+                        class="socials__icon socials__icon--white-fill"
+                        width="20"
+                        height="20"
+                      >
                         <use href="./images/icons.svg#icon-linkedin"></use></svg
                     ></a>
                   </li>
@@ -451,7 +640,9 @@
               </li>
 
               <li class="address__item">
-                <a href="mailto:info@example.com" class="address__link address--color"
+                <a
+                  href="mailto:info@example.com"
+                  class="address__link address--color"
                   >info@example.com</a
                 >
               </li>
@@ -465,12 +656,16 @@
           </address>
         </div>
         <!-- join -->
-    <div class="join footer__join">
+        <div class="join footer__join">
           <p class="join__title">Присоединяйтесь</p>
           <ul class="socials">
             <li class="socials__item">
               <a href="" class="socials__link socials__link--rgba-color">
-                <svg class="socials__icon socials__icon--white-color" width="20" height="20">
+                <svg
+                  class="socials__icon socials__icon--white-color"
+                  width="20"
+                  height="20"
+                >
                   <use href="./images/icons.svg#icon-instagram"></use>
                 </svg>
               </a>
@@ -478,27 +673,39 @@
 
             <li class="socials__item">
               <a href="" class="socials__link socials__link--rgba-color"
-                ><svg class="socials__icon socials__icon--white-color" width="20" height="20">
+                ><svg
+                  class="socials__icon socials__icon--white-color"
+                  width="20"
+                  height="20"
+                >
                   <use href="./images/icons.svg#icon-twitter"></use></svg
               ></a>
             </li>
 
             <li class="socials__item">
               <a href="" class="socials__link socials__link--rgba-color"
-                ><svg class="socials__icon socials__icon--white-color" width="20" height="20">
+                ><svg
+                  class="socials__icon socials__icon--white-color"
+                  width="20"
+                  height="20"
+                >
                   <use href="./images/icons.svg#icon-facebook"></use></svg
               ></a>
             </li>
             <li class="socials__item">
               <a href="" class="socials__link socials__link--rgba-color"
-                ><svg class="socials__icon socials__icon--white-color" width="20" height="20">
+                ><svg
+                  class="socials__icon socials__icon--white-color"
+                  width="20"
+                  height="20"
+                >
                   <use href="./images/icons.svg#icon-linkedin"></use></svg
               ></a>
             </li>
           </ul>
         </div>
         <!-- subscribe -->
-    <div class="subscribe footer__subscribe">
+        <div class="subscribe footer__subscribe">
           <p class="subscribe__title">Подпишитесь на рассылку</p>
           <form class="form">
             <div class="form__field">
@@ -510,7 +717,10 @@
                 class="form__input"
                 required
               />
-              <label for="subscribe-email" class="form__label visually-hidden"></label>
+              <label
+                for="subscribe-email"
+                class="form__label visually-hidden"
+              ></label>
             </div>
 
             <button type="submit" class="form__button">
@@ -523,7 +733,7 @@
         </div>
       </div>
     </footer>
-    <!-- modal
+    <!-- modal -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="button__close" data-modal-close>
@@ -553,7 +763,13 @@
           <div class="modal__field">
             <label for="user-tel" class="modal__lable">Телефон</label>
             <div class="modal__wrap">
-              <input type="tel" name="user-tel" id="user-tel" class="modal__input" required />
+              <input
+                type="tel"
+                name="user-tel"
+                id="user-tel"
+                class="modal__input"
+                required
+              />
               <svg class="modal__icon" width="18" height="18">
                 <use href="./images/icons.svg#icon-phone-black"></use>
               </svg>
@@ -563,7 +779,13 @@
           <div class="modal__field">
             <label for="user-email" class="modal__lable">Почта</label>
             <div class="modal__wrap">
-              <input type="email" name="user-email" id="user-email" class="modal__input" required />
+              <input
+                type="email"
+                name="user-email"
+                id="user-email"
+                class="modal__input"
+                required
+              />
               <svg class="modal__icon" width="18" height="18">
                 <use href="./images/icons.svg#icon-email-black"></use>
               </svg>
@@ -590,7 +812,9 @@
             <label for="privacy" class="check__text">
               <span
                 ><svg class="check__icon" width="11" height="8">
-                  <use href="./images/icons.svg#icon-vector-white"></use></svg></span
+                  <use
+                    href="./images/icons.svg#icon-vector-white"
+                  ></use></svg></span
               >Соглашаюсь с рассылкой и принимаю
               <a href="" class="modal__link">Условия договора</a></label
             >
@@ -600,6 +824,8 @@
         </form>
       </div>
     </div>
+
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

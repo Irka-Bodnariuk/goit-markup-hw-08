@@ -2,7 +2,14 @@
   background-color: $white-color;
   &__list {
     @extend %list;
-    margin-bottom: 50px;
+
+    margin-bottom: 40px;
+    @include tablet {
+      margin-bottom: $tipical-margin;
+    }
+    @include desktop {
+      margin-bottom: 50px;
+    }
   }
   &__title {
     @extend %title;
@@ -10,10 +17,13 @@
 }
 
 .filter {
-  @include centredFlex();
-  &__item:not(:first-child) {
-    margin-left: 8px;
+  @include centredFlex($jc: none);
+  flex-wrap: wrap;
+  gap: 8px;
+  @include tablet {
+    justify-content: center;
   }
+
   &__button {
     padding: 6px 22px;
 
@@ -45,16 +55,19 @@
   @extend %list;
   @include centredFlex($ai: none, $jc: none);
   flex-wrap: wrap;
-  margin-left: calc(-1 * $tipical-margin);
-  margin-top: calc(-1 * $tipical-margin);
+  gap: $tipical-margin;
+
   &__item {
-    flex-basis: calc(100% / 3 - $tipical-margin);
-    margin-left: $tipical-margin;
-    margin-top: $tipical-margin;
+    @include tablet {
+      width: calc((100% - $tipical-margin) / 2);
+    }
+    @include desktop {
+      width: calc((100% - $tipical-margin * 2) / 3);
+    }
   }
   &__link {
     @extend %link;
-    @include centredFlex($df: block, $ai: none, $jc: none);
+    // @include centredFlex($df: block, $ai: none, $jc: none);
     transition: box-shadow $transition-active;
     &:hover,
     &:focus {
