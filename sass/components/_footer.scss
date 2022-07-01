@@ -2,14 +2,26 @@
   background-color: $background-color;
   padding-top: 60px;
   padding-bottom: 60px;
+  text-align: center;
   &__container {
-    @include centredFlex($ai: baseline, $jc: none);
+    @include tablet {
+      @include centredFlex($jc: space-around, $ai: none);
+      flex-wrap: wrap;
+    }
+    @include desktop {
+      @include centredFlex($ai: baseline, $jc: none);
+      text-align: left;
+    }
   }
   &__subscribe {
-    margin-left: auto;
+    @include desktop {
+      margin-left: auto;
+    }
   }
   &__join {
-    margin-left: 70px;
+    @include desktop {
+      margin-left: 70px;
+    }
   }
 }
 .address__link {
@@ -31,7 +43,10 @@
 }
 
 .address__item:not(:first-child) {
-  margin-top: 9px;
+  margin-top: 8px;
+  @include desktop {
+    margin-top: 9px;
+  }
 }
 
 .address--color {
@@ -47,8 +62,17 @@
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  text-align: left;
+  text-align: center;
   margin-bottom: 20px;
+  margin-top: 60px;
+
+  @include tablet {
+    margin-top: 0;
+  }
+  @include desktop {
+    // text-align: left;
+    margin-top: 0;
+  }
 }
 .socials__link--rgba-color {
   background-color: rgba(255, 255, 255, 0.1);
@@ -65,14 +89,20 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 20px;
+  margin-top: 60px;
+  @include desktop {
+    margin-top: 0;
+  }
 }
 
 .form {
-  @include centredFlex($ai: none, $jc: none);
+  @include desktop {
+    @include centredFlex($ai: none, $jc: none);
+  }
   &__input {
     background-color: transparent;
-    width: 358px;
-    margin-right: 12px;
+    width: 100%;
+    // margin-right: 12px;
     height: 50px;
     padding: 15px 16px;
     font-weight: 400;
@@ -86,8 +116,17 @@
     border-radius: 4px;
     outline: none;
     transition: border-color $transition-active;
+    margin-bottom: 20px;
     &:focus {
       border-color: $accent-color;
+    }
+    @include tablet {
+      width: 450px;
+    }
+    @include desktop {
+      width: 358px;
+      margin-right: 12px;
+      margin-bottom: 0;
     }
 
     &::placeholder {
@@ -104,7 +143,10 @@
 
   &__button {
     @extend %button;
+    // @include desktop {
     @include centredFlex();
+    margin: 0 auto;
+    // }
     box-shadow: $box-shadow-rgba;
     transition: background-color $transition-active, box-shadow $transition-active;
     &:hover,
