@@ -165,8 +165,12 @@
     @extend %list;
     margin-top: 8px;
   }
-  &__item {
+  &__item:not(:last-child) {
     margin-bottom: 36px;
+  }
+
+  &__item:last-child {
+    margin-bottom: 20px;
   }
   &__link {
     @extend %link;
