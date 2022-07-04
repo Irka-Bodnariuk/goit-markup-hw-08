@@ -1,39 +1,35 @@
 .header {
-  @include tablet {
-    height: 60px;
-  }
-
+  position: relative;
   background-color: $white-color;
   border-bottom: $border-color;
   &__container {
     @include centredFlex($jc: space-between);
+    @media screen and (max-width: 767px) {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
   }
-  &__button {
-    background-color: transparent;
-    width: 40px;
-    height: 40px;
-    // margin-left: auto;
-    border: transparent;
-    padding: 0;
-  }
-  position: relative;
 }
 
 .navigation {
   @include centredFlex();
   &__list {
+    @extend %list;
     display: none;
-    @include tablet {
-      @extend %list;
-      @include centredFlex($ai: none, $jc: none);
-    }
 
-    margin-left: 93px;
+    @include tablet {
+      @include centredFlex($ai: none, $jc: none);
+      margin-left: 88px;
+    }
+    @include desktop {
+      margin-left: 93px;
+    }
   }
   &__link {
     position: relative;
     @extend %link;
     @include centredFlex($df: block, $ai: none, $jc: none);
+
     padding-top: 32px;
     padding-bottom: 32px;
 
@@ -68,22 +64,33 @@
   }
 }
 .contact {
+  @extend %list;
   display: none;
-
   @include tablet {
-    @extend %list;
-    @include centredFlex();
+    display: block;
     margin-left: auto;
+  }
+
+  @include desktop {
+    @include centredFlex();
   }
 
   &__link {
     @extend %link;
     color: $text-color;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 12px;
+    line-height: 1.17;
+
     letter-spacing: 0.02em;
-    @include centredFlex();
+    @include desktop {
+      font-size: 14px;
+      line-height: 1.14;
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+
+    @include centredFlex($jc: none);
     transition: color $transition-active;
     &:hover,
     &:focus {
@@ -91,16 +98,36 @@
     }
   }
   &__item:last-child {
-    margin-left: $tipical-margin;
+    margin-top: 10px;
+    @include desktop {
+      margin-top: 0;
+      margin-left: $tipical-margin;
+    }
   }
 
   &__icon {
     margin-right: 10px;
     fill: currentColor;
+    @include desktop {
+      .contact__item & {
+        width: 16px;
+        height: 12px;
+      }
+      .contact__item:last-child & {
+        width: 10px;
+        height: 16px;
+      }
+    }
   }
 }
+
 .header__button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
   display: block;
+  padding: 0;
   margin-left: auto;
   transition: fill $transition-active;
   &:hover,
@@ -108,6 +135,9 @@
     fill: $accent-color;
   }
   @include tablet {
+    display: none;
+  }
+  @include desktop {
     display: none;
   }
 }
@@ -119,9 +149,9 @@
   background-color: $white-color;
   width: 100vw;
   height: 100vh;
-  padding-top: 10px;
-  padding-bottom: 48px;
-  padding-left: 40px;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity $transition-active, visibility $transition-active;
 
   > .container {
     display: flex;
@@ -129,14 +159,12 @@
     justify-content: space-between;
     height: 100%;
     overflow-y: auto;
+    padding: 10px 15px 48px 40px;
   }
   &__list {
     @extend %list;
     margin-top: 8px;
   }
-  // &__item:not(:last-child) {
-  //   margin-bottom: 36px;
-  // }
   &__item {
     margin-bottom: 36px;
   }

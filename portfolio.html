@@ -22,8 +22,8 @@
     <!-- header -->
     <header class="header">
       <div class="container header__container">
-        <nav class="navigation header__navigation">
-          <a href="./index.html" lang="en" class="logo link"
+        <nav class="navigation">
+          <a href="./index.html" lang="en" class="logo"
             ><span class="logo--color">Web</span>Studio</a
           >
           <ul class="navigation__list">
@@ -32,7 +32,9 @@
             </li>
 
             <li class="navigation__item">
-              <a href="./portfolio.html" class="navigation__link current">Портфолио</a>
+              <a href="./portfolio.html" class="navigation__link current"
+                >Портфолио</a
+              >
             </li>
 
             <li class="navigation__item">
@@ -44,7 +46,7 @@
         <ul class="contact">
           <li class="contact__item">
             <a href="mailto:info@devstudio.com" class="contact__link">
-              <svg class="contact__icon" width="16" height="12">
+              <svg class="contact__icon" width="14" height="10">
                 <use href="./images/icons.svg#icon-envelope"></use>
               </svg>
               info@devstudio.com</a
@@ -53,13 +55,83 @@
 
           <li class="contact__item">
             <a href="tel:+380961111111" class="contact__link">
-              <svg class="contact__icon" width="10" height="16">
+              <svg class="contact__icon" width="10" height="14">
                 <use href="./images/icons.svg#icon-smartphone"></use>
               </svg>
               +38 096 111 11 11</a
             >
           </li>
         </ul>
+        <button
+          type="button"
+          class="button__icon--open header__button"
+          data-menu-open
+        >
+          <svg
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use href="./images/icons.svg#icon-menu_40px"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-menu is-hidden">
+        <div class="container">
+          <div class="mobile-menu__top-box">
+            <button type="button" class="header__button button__icon--close">
+              <svg width="40" height="40">
+                <use href="./images/icons.svg#icon-close_40px"></use>
+              </svg>
+            </button>
+            <ul class="mobile-menu__list">
+              <li class="mobile-menu__item">
+                <a href="./index.html" class="mobile-menu__link">Студия</a>
+              </li>
+
+              <li class="mobile-menu__item">
+                <a
+                  href="./portfolio.html"
+                  class="current-mobile mobile-menu__link"
+                  >Портфолио</a
+                >
+              </li>
+
+              <li class="mobile-menu__item">
+                <a href="#contacts" class="mobile-menu__link">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="mobile-menu__bottom-box">
+            <ul class="mobile-contact">
+              <li class="mobile-contact__item">
+                <a href="tel:+380961111111" class="mobile-contact__link"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+
+              <li class="mobile-contact__item">
+                <a href="mailto:info@devstudio.com" class="mobile-contact__link"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mobile-soc">
+              <li class="mobile-soc__item">
+                <a href="" class="mobile-soc_link">Instagram</a>
+              </li>
+              <li class="mobile-soc__item">
+                <a href="" class="mobile-soc_link">Twitter</a>
+              </li>
+              <li class="mobile-soc__item">
+                <a href="" class="mobile-soc_link">Facebook</a>
+              </li>
+              <li class="mobile-soc__item">
+                <a href="" class="mobile-soc_link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <!-- main -->
@@ -95,7 +167,10 @@
                 <div class="card__thumb">
                   <picture>
                     <source
-                      srcset="./images/portfolio-img-1.jpg 1x, ./images/portfolio-img@2x-1.jpg 2x"
+                      srcset="
+                        ./images/portfolio-img-1.jpg    1x,
+                        ./images/portfolio-img@2x-1.jpg 2x
+                      "
                       media="(min-width: 1200px)"
                     />
                     <source
@@ -121,9 +196,9 @@
                   </picture>
 
                   <p class="card__top-text">
-                    Ресурс предлагает комплексные предложения с разным уровнем функционала и
-                    сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
-                    или частном лице.
+                    Ресурс предлагает комплексные предложения с разным уровнем
+                    функционала и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.
                   </p>
                 </div>
 
@@ -139,7 +214,10 @@
                 <div class="card__thumb">
                   <picture>
                     <source
-                      srcset="./images/portfolio-img-2.jpg 1x, ./images/portfolio-img@2x-2.jpg 2x"
+                      srcset="
+                        ./images/portfolio-img-2.jpg    1x,
+                        ./images/portfolio-img@2x-2.jpg 2x
+                      "
                       media="(min-width: 1200px)"
                     />
                     <source
@@ -165,9 +243,9 @@
                   </picture>
 
                   <p class="card__top-text">
-                    Ресурс предлагает комплексные предложения с разным уровнем функционала и
-                    сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
-                    или частном лице.
+                    Ресурс предлагает комплексные предложения с разным уровнем
+                    функционала и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.
                   </p>
                 </div>
                 <div class="card__content">
@@ -182,7 +260,10 @@
                 <div class="card__thumb">
                   <picture>
                     <source
-                      srcset="./images/portfolio-img-3.jpg 1x, ./images/portfolio-img@2x-3.jpg 2x"
+                      srcset="
+                        ./images/portfolio-img-3.jpg    1x,
+                        ./images/portfolio-img@2x-3.jpg 2x
+                      "
                       media="(min-width: 1200px)"
                     />
                     <source
@@ -208,9 +289,9 @@
                   </picture>
 
                   <p class="card__top-text">
-                    Ресурс предлагает комплексные предложения с разным уровнем функционала и
-                    сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
-                    или частном лице.
+                    Ресурс предлагает комплексные предложения с разным уровнем
+                    функционала и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.
                   </p>
                 </div>
                 <div class="card__content">
@@ -225,7 +306,10 @@
                 <div class="card__thumb">
                   <picture>
                     <source
-                      srcset="./images/portfolio-img-4.jpg 1x, ./images/portfolio-img@2x-4.jpg 2x"
+                      srcset="
+                        ./images/portfolio-img-4.jpg    1x,
+                        ./images/portfolio-img@2x-4.jpg 2x
+                      "
                       media="(min-width: 1200px)"
                     />
                     <source
@@ -251,9 +335,9 @@
                   </picture>
 
                   <p class="card__top-text">
-                    Ресурс предлагает комплексные предложения с разным уровнем функционала и
-                    сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
-                    или частном лице.
+                    Ресурс предлагает комплексные предложения с разным уровнем
+                    функционала и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.
                   </p>
                 </div>
                 <div class="card__content">
@@ -268,7 +352,10 @@
                 <div class="card__thumb">
                   <picture>
                     <source
-                      srcset="./images/portfolio-img-5.jpg 1x, ./images/portfolio-img@2x-5.jpg 2x"
+                      srcset="
+                        ./images/portfolio-img-5.jpg    1x,
+                        ./images/portfolio-img@2x-5.jpg 2x
+                      "
                       media="(min-width: 1200px)"
                     />
                     <source
@@ -294,9 +381,9 @@
                   </picture>
 
                   <p class="card__top-text">
-                    Ресурс предлагает комплексные предложения с разным уровнем функционала и
-                    сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
-                    или частном лице.
+                    Ресурс предлагает комплексные предложения с разным уровнем
+                    функционала и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.
                   </p>
                 </div>
                 <div class="card__content">
@@ -311,7 +398,10 @@
                 <div class="card__thumb">
                   <picture>
                     <source
-                      srcset="./images/portfolio-img-6.jpg 1x, ./images/portfolio-img@2x-6.jpg 2x"
+                      srcset="
+                        ./images/portfolio-img-6.jpg    1x,
+                        ./images/portfolio-img@2x-6.jpg 2x
+                      "
                       media="(min-width: 1200px)"
                     />
                     <source
@@ -337,9 +427,9 @@
                   </picture>
 
                   <p class="card__top-text">
-                    Ресурс предлагает комплексные предложения с разным уровнем функционала и
-                    сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
-                    или частном лице.
+                    Ресурс предлагает комплексные предложения с разным уровнем
+                    функционала и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.
                   </p>
                 </div>
                 <div class="card__content">
@@ -354,7 +444,10 @@
                 <div class="card__thumb">
                   <picture>
                     <source
-                      srcset="./images/portfolio-img-7.jpg 1x, ./images/portfolio-img@2x-7.jpg 2x"
+                      srcset="
+                        ./images/portfolio-img-7.jpg    1x,
+                        ./images/portfolio-img@2x-7.jpg 2x
+                      "
                       media="(min-width: 1200px)"
                     />
                     <source
@@ -380,9 +473,9 @@
                   </picture>
 
                   <p class="card__top-text">
-                    Ресурс предлагает комплексные предложения с разным уровнем функционала и
-                    сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
-                    или частном лице.
+                    Ресурс предлагает комплексные предложения с разным уровнем
+                    функционала и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.
                   </p>
                 </div>
                 <div class="card__content">
@@ -397,7 +490,10 @@
                 <div class="card__thumb">
                   <picture>
                     <source
-                      srcset="./images/portfolio-img-8.jpg 1x, ./images/portfolio-img@2x-8.jpg 2x"
+                      srcset="
+                        ./images/portfolio-img-8.jpg    1x,
+                        ./images/portfolio-img@2x-8.jpg 2x
+                      "
                       media="(min-width: 1200px)"
                     />
                     <source
@@ -423,9 +519,9 @@
                   </picture>
 
                   <p class="card__top-text">
-                    Ресурс предлагает комплексные предложения с разным уровнем функционала и
-                    сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
-                    или частном лице.
+                    Ресурс предлагает комплексные предложения с разным уровнем
+                    функционала и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.
                   </p>
                 </div>
                 <div class="card__content">
@@ -440,7 +536,10 @@
                 <div class="card__thumb">
                   <picture>
                     <source
-                      srcset="./images/portfolio-img-9.jpg 1x, ./images/portfolio-img@2x-9.jpg 2x"
+                      srcset="
+                        ./images/portfolio-img-9.jpg    1x,
+                        ./images/portfolio-img@2x-9.jpg 2x
+                      "
                       media="(min-width: 1200px)"
                     />
                     <source
@@ -466,9 +565,9 @@
                   </picture>
 
                   <p class="card__top-text">
-                    Ресурс предлагает комплексные предложения с разным уровнем функционала и
-                    сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
-                    или частном лице.
+                    Ресурс предлагает комплексные предложения с разным уровнем
+                    функционала и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.
                   </p>
                 </div>
                 <div class="card__content">
@@ -501,7 +600,9 @@
               </li>
 
               <li class="address__item">
-                <a href="mailto:info@example.com" class="address__link address--color"
+                <a
+                  href="mailto:info@example.com"
+                  class="address__link address--color"
                   >info@example.com</a
                 >
               </li>
@@ -520,7 +621,11 @@
           <ul class="socials">
             <li class="socials__item">
               <a href="" class="socials__link socials__link--rgba-color">
-                <svg class="socials__icon socials__icon--white-color" width="20" height="20">
+                <svg
+                  class="socials__icon socials__icon--white-color"
+                  width="20"
+                  height="20"
+                >
                   <use href="./images/icons.svg#icon-instagram"></use>
                 </svg>
               </a>
@@ -528,20 +633,32 @@
 
             <li class="socials__item">
               <a href="" class="socials__link socials__link--rgba-color"
-                ><svg class="socials__icon socials__icon--white-color" width="20" height="20">
+                ><svg
+                  class="socials__icon socials__icon--white-color"
+                  width="20"
+                  height="20"
+                >
                   <use href="./images/icons.svg#icon-twitter"></use></svg
               ></a>
             </li>
 
             <li class="socials__item">
               <a href="" class="socials__link socials__link--rgba-color"
-                ><svg class="socials__icon socials__icon--white-color" width="20" height="20">
+                ><svg
+                  class="socials__icon socials__icon--white-color"
+                  width="20"
+                  height="20"
+                >
                   <use href="./images/icons.svg#icon-facebook"></use></svg
               ></a>
             </li>
             <li class="socials__item">
               <a href="" class="socials__link socials__link--rgba-color"
-                ><svg class="socials__icon socials__icon--white-color" width="20" height="20">
+                ><svg
+                  class="socials__icon socials__icon--white-color"
+                  width="20"
+                  height="20"
+                >
                   <use href="./images/icons.svg#icon-linkedin"></use></svg
               ></a>
             </li>
@@ -560,7 +677,10 @@
                 class="form__input"
                 required
               />
-              <label for="subscribe-email" class="form__label visually-hidden"></label>
+              <label
+                for="subscribe-email"
+                class="form__label visually-hidden"
+              ></label>
             </div>
 
             <button type="submit" class="form__button">
@@ -573,5 +693,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

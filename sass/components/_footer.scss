@@ -102,14 +102,12 @@
   &__input {
     background-color: transparent;
     width: 100%;
-    // margin-right: 12px;
     height: 50px;
     padding: 15px 16px;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.25;
     letter-spacing: 0.03em;
-    /* color: $accent-color; */
     color: $rgba-color;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -143,12 +141,11 @@
 
   &__button {
     @extend %button;
-    // @include desktop {
     @include centredFlex();
     margin: 0 auto;
-    // }
     box-shadow: $box-shadow-rgba;
-    transition: background-color $transition-active, box-shadow $transition-active;
+    transition: background-color $transition-active,
+      box-shadow $transition-active;
     &:hover,
     &:focus {
       background-color: $button-hover-color;
