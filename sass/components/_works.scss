@@ -1,10 +1,10 @@
 .works {
-  @media screen and (max-width: 1199px) {
-    display: none;
-  }
-
+  display: none;
   padding-top: 0;
   background-color: $white-color;
+  @include desktop {
+    display: block;
+  }
   &__title {
     @extend %title;
   }
